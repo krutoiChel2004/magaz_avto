@@ -4,6 +4,11 @@ WORKDIR /app
 
 RUN npm install -g pnpm@9
 
+ARG API_URL=http://api:8000/api
+ARG NEXT_PUBLIC_API_URL=/api
+ENV API_URL=$API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
 # workspace files
 COPY pnpm-lock.yaml ./
 COPY pnpm-workspace.yaml ./

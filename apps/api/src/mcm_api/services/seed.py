@@ -6,7 +6,6 @@ from decimal import Decimal
 from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
-print(7676)
 from mcm_api.core.database import AsyncSessionLocal
 from mcm_api.core.security import hash_password
 from mcm_api.models.entities import (

@@ -110,3 +110,14 @@ Admin API:
 - личный кабинет с заказами;
 - админская панель с аналитикой и списком заказов;
 - складские остатки и история цен на стороне API.
+
+## Production-хостинг
+
+Для VPS Selectel подготовлены:
+
+- `docker-compose.prod.yml` - production-стек без публикации PostgreSQL, MinIO,
+  API и Next.js наружу;
+- `deploy/Caddyfile` - HTTPS и reverse proxy для сайта, `/api` и `/s3`;
+- `.env.production.example` - шаблон переменных окружения.
+
+Инструкция по запуску: `docs/SELECTEL_DEPLOY.md`.

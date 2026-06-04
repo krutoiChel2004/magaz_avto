@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Alert,
   App,
@@ -151,7 +151,9 @@ export default function AdminPage() {
   const hasAccess = Boolean(user && user.role !== "customer");
   const canUseRealAdmin = Boolean(hasAccess && token && !token.startsWith("demo-"));
 
-  async function loadAdminData() {
+  const loadAdminData = useCallback(async () => {
+    await Promise.resolve();
+
     if (!canUseRealAdmin || !token) {
       setDashboard(mockDashboardPayload);
       setOrders(mockOrders);
@@ -187,11 +189,15 @@ export default function AdminPage() {
     } finally {
       setLoading(false);
     }
-  }
+  }, [canUseRealAdmin, message, token]);
 
   useEffect(() => {
-    void loadAdminData();
-  }, [canUseRealAdmin, token]);
+    const timeoutId = window.setTimeout(() => {
+      void loadAdminData();
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [loadAdminData]);
 
   function resetProductEditor() {
     setEditingProductId(null);

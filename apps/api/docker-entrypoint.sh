@@ -29,7 +29,12 @@ if os.environ.get("S3_ENABLED", "").lower() == "true":
     wait_for_tcp(s3.hostname or "minio", s3.port or 9000, "MinIO")
 PY
 
-uv run alembic upgrade head
-uv run python -m mcm_api.services.seed
+if [ "${RUN_MIGRATIONS:-true}" = "true" ]; then
+    uv run alembic upgrade head
+fi
+
+if [ "${RUN_SEED:-true}" = "true" ]; then
+    uv run python -m mcm_api.services.seed
+fi
 
 exec uv run uvicorn mcm_api.main:app --app-dir src --host 0.0.0.0 --port 8000
