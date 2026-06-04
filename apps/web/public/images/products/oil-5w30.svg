@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#29363c"/>
+      <stop offset="1" stop-color="#7f8f52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect x="430" y="210" width="330" height="390" rx="36" fill="#121212"/>
+  <rect x="470" y="150" width="240" height="90" rx="20" fill="#242424"/>
+  <rect x="500" y="340" width="190" height="140" rx="20" fill="#9dba4b"/>
+  <text x="100" y="120" fill="#f7fbe5" font-size="56" font-family="Arial, sans-serif">5W-30 4L</text>
+  <text x="100" y="178" fill="#f7fbe5" font-size="34" font-family="Arial, sans-serif">SYNTHETIC OIL</text>
+</svg>

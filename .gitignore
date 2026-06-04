@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+.vscode
+.venv
+node_modules
+pnpm-lock.yaml
+dist
+coverage
+.next
+*.pyc
+__pycache__
+apps/api/.venv
+apps/api/.pytest_cache
+apps/api/alembic.ini.bak
+apps/api/mcm.db

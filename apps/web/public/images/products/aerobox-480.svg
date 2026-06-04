@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2f3338"/>
+      <stop offset="1" stop-color="#8a6f58"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect x="120" y="250" width="960" height="300" rx="120" fill="#151515" opacity="0.9"/>
+  <text x="100" y="110" fill="#f3eee6" font-size="56" font-family="Arial, sans-serif">TrailBox 480</text>
+  <text x="100" y="170" fill="#f3eee6" font-size="34" font-family="Arial, sans-serif">AEROBOX</text>
+</svg>

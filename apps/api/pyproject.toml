@@ -1,0 +1,30 @@
+[project]
+name = "mcm-api"
+version = "0.1.0"
+description = "Backend API for the MCM auto parts diploma project"
+readme = "README.md"
+authors = [{ name = "Matvey Agafonov", email = "matvejagafonov@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.0",
+    "asyncpg>=0.30.0",
+    "boto3>=1.40.0",
+    "email-validator>=2.3.0",
+    "fastapi>=0.116.0",
+    "greenlet>=3.2.4",
+    "passlib[bcrypt]>=1.7.4",
+    "psycopg[binary]>=3.2.9",
+    "pydantic-settings>=2.10.0",
+    "pyjwt>=2.10.1",
+    "python-multipart>=0.0.20",
+    "sqlalchemy>=2.0.41",
+    "uvicorn[standard]>=0.35.0",
+]
+
+[project.scripts]
+mcm-api = "mcm_api.main:run"
+seed-db = "mcm_api.services.seed:main"
+
+[build-system]
+requires = ["uv_build>=0.9.24,<0.10.0"]
+build-backend = "uv_build"

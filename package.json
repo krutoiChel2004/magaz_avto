@@ -1,0 +1,12 @@
+{
+  "name": "magaz-avto-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.28.2",
+  "scripts": {
+    "dev:web": "pnpm --dir apps/web dev",
+    "build:web": "pnpm --dir apps/web build",
+    "lint:web": "pnpm --dir apps/web lint",
+    "dev:api": "uv run --directory apps/api uvicorn mcm_api.main:app --reload --app-dir src --host 0.0.0.0 --port 8000",
+    "seed:api": "uv run --directory apps/api python -m mcm_api.services.seed"
+  }
+}

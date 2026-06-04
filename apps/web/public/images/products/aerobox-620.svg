@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#39424c"/>
+      <stop offset="1" stop-color="#6f7c85"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect x="110" y="245" width="980" height="320" rx="128" fill="#101214" opacity="0.92"/>
+  <rect x="200" y="350" width="800" height="12" fill="#7b828a" opacity="0.6"/>
+  <text x="100" y="120" fill="#eff4f8" font-size="56" font-family="Arial, sans-serif">CargoLine 620</text>
+  <text x="100" y="178" fill="#eff4f8" font-size="34" font-family="Arial, sans-serif">AEROBOX</text>
+</svg>
